@@ -15767,14 +15767,15 @@ statemachine abstract import class CR4Player extends CPlayer
 		}
 	}
 	
-	public timer function DischargeWeaponAfter( td : float, id : int )
+	private var forcedFinisherVictim : CActor;	
+	
+	public timer function DischargeWeaponAfter( td : float, id : int ) 
 	{
 		GetPhantomWeaponMgr().DischargeWeapon();
 	}
 	
 	
 
-private forcedFinisherVictim : CActor;
 
 timer function PerformFinisher( time : float , id : int )
 {
